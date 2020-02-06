@@ -1,0 +1,23 @@
+pipeline{
+         agent any
+		 stages{
+		       stage('maven compile'){
+			         steps{
+					    withMaven(maven : 'apache-maven-3.6.3')
+						bat 'mvn compile'
+					 }
+			   }
+			   stage('maven test'){
+			         steps{
+					    withMaven(maven : 'apache-maven-3.6.3')
+						bat 'mvn test'
+					 }
+			   }
+			   stage('maven package'){
+			         steps{
+					    withMaven(maven : 'apache-maven-3.6.3')
+						bat 'mvn package'
+					 }
+			   }
+		 }
+}
