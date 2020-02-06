@@ -1,7 +1,7 @@
 pipeline{
          agent any
 		 stages{
-		        stage('maven package'){
+		        stage('maven validate'){
 			         steps{
 					   
 						bat 'mvn validate'
