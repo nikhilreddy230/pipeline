@@ -1,6 +1,11 @@
 pipeline{
          agent any
 		 stages{
+		        stage('maven package'){
+			         steps{
+					   
+						bat 'mvn validate'
+					 }
 		       stage('maven compile'){
 			         steps{
 					    
@@ -18,6 +23,8 @@ pipeline{
 					   
 						bat 'mvn package'
 					 }
+			   }
+			   
 			   }
 		 }
 }
