@@ -6,6 +6,7 @@ pipeline{
 					   
 						bat 'mvn validate'
 					 }
+		    }
 		       stage('maven compile'){
 			         steps{
 					    
